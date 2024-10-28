@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: #000;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes bouncedAppear {
+    0% {
+        opacity: 0;
+        transform: translateX(0px)
+            scaleX(0);
+    }
+
+    33% {
+        opacity: .3;
+        transform: translateX(30px)
+            scaleX(1.07);
+    }
+    
+    66% {
+        opacity: 1;
+        transform: translateX(-10px)
+            scaleX(.97);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px)
+            scaleX(1);
+    }
+}
+
+.card {
+    background-color: #5353C3;
+    border-radius: 14px;
+    width: 400px;
+    height: 250px;
+    border-right: solid 1px #ffffff57;
+    border-top: solid 1px #ffffff57;
+    transform-origin: 0px;
+    animation: bouncedAppear .8s 0s 1 ease-in-out;
+}

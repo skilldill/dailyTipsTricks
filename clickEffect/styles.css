@@ -1,0 +1,72 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+button {
+    border: none;
+    display: block;
+    padding: 20px 40px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 14px;
+    background-color: #5353C3;
+    position: relative;
+}
+
+@keyframes scattering {
+    0% {
+        transform: scale(1);
+        opacity: .7;
+    }
+
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+.effectElement {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: .7;
+    border: 10px solid #5353C3;
+    border-radius: 14px;
+    animation: scattering .5s 0s 1 ease-in-out;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+
+    33% {
+        transform: scale(.95);
+    }
+
+    66% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.bounceButton {
+    animation: bounce .3s 0s 1 ease-in-out;
+}
