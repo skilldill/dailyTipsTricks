@@ -1,5 +1,5 @@
 const allParallaxEls = 
-    document.querySelectorAll('[parallax');
+    document.querySelectorAll('[parallax]');
 
 const MIDDLE = window.innerWidth / 2;
 
