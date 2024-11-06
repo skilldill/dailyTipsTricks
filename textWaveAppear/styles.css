@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    color: #5353C3;
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 15px;
+}
+
+[waveable] {
+    display: flex;
+    perspective: 1000px;
+}
+
+@keyframes waveAppear {
+    0% {
+        opacity: 0;
+        transform: scale(.7)
+            translateY(-100px)
+            translateZ(-1000px);
+    }
+
+    70% {
+        opacity: 1;
+        transform: scale(1)
+            translateY(0px)
+            translateZ(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1)
+            translateY(0px)
+            translateZ(0px);
+    }
+}
+
+.hideWaveable {
+    opacity: 0;
+    transform: scale(0)
+        translateY(-100px)
+        translateZ(-1000px);
+    text-shadow: 0px 0px 10px #5353C388;
+}
+
+.showWaveable {
+    opacity: 1;
+    transform: scale(1)
+        translateY(0px)
+        translateZ(0px);
+    animation: waveAppear 2s 0s 1 ease-in-out;
+}
