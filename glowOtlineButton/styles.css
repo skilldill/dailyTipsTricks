@@ -1,0 +1,80 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #000;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    display: block;
+    position: relative;
+    border: none;
+    height: 50px;
+    border-radius: 14px;
+    background-color: #000;
+    width: 120px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background .3s;
+}
+
+.buttonLayer {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+    left: 2px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #5353c3;
+    background-color: #000000aa;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s;
+    backdrop-filter: blur(10px);
+    z-index: 2;
+}
+
+.lighter {
+    position: absolute;
+    width: 30px;
+    height: 200px;
+    transform-origin: 50% 65%;
+    left: calc(50% - 15px);
+    top: -100px;
+    opacity: 0;
+    transition: all .7s;
+    background-color: #5353c3;
+    filter: blur(10px);
+}
+
+@keyframes rotate {
+    0% {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(270deg);
+    }
+}
+
+.hovered .lighter {
+    opacity: 1;
+    animation: rotate 1s 0s 1 ease-out;
+}
+
+.outlined {
+    background-color: #5353c3;
+}
