@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+    background-color: #000;
+}
+
+.bricksLayer {
+    position: relative;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    gap: 1px;
+}
+
+.bricksRow {
+    display: flex;
+    gap: 1px;
+}
+
+.translated {
+    transform: translateX(-35px);
+}
+
+.brick {
+    width: 70px;
+    min-width: 70px;
+    height: 40px;
+    border-radius: 0px;
+    background-color: #000000;
+    z-index: 2;
+}
+
+.lighter {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 200px;
+    height: 200px;
+    background-color: #ffffff30;
+    filter: blur(15px);
+    border-radius: 100%;
+}
