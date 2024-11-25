@@ -1,11 +1,11 @@
 const bricks = document.getElementById('bricks');
 
 const BRICKS_IN_ROW = window.innerWidth / 70;
-const ROWS_COUNT = window.innerHeight / 30;
+const ROWS_COUNT = window.innerHeight / 40;
 
 const lighter = document.createElement('div');
-bricks.appendChild(lighter);
 lighter.classList.add('lighter');
+bricks.appendChild(lighter);
 
 document.addEventListener('mousemove', (event) => {
     const { clientX, clientY } = event;
