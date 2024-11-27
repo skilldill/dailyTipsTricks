@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    background-image: url(./dot.png);
+    background-position: center;
+}
+
+.perspective {
+    perspective: 1000px;
+}
+
+.flipCard {
+    position: relative;
+    width: 280px;
+    height: 170px;
+    overflow: hidden;
+    transform: rotate3d(0, 1, 0, 0deg);
+    transition: all 1s;
+}
+
+.frontSide,
+.backSide {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 14px;
+    background-color: #5353c3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #ffffff17;
+    border-right: 1px solid #ffffff17;
+    transition: opacity .1s .3s;
+}
+
+.backSide {
+    transform: rotate3d(0, 1, 0, 180deg);
+}
+
+.fliped {
+    transform: rotate3d(0, 1, 0, 180deg);
+}
+
+.fliped .frontSide {
+    opacity: 0;
+}
+
+<div class="container">
+        <div class="perspective">
+            <div class="flipCard">
+                <div class="backSide">
+                    <h2>Back side</h2>
+                </div>
+                <div class="frontSide">
+                    <h2>Front side</h2>
+                </div>
+            </div>
+        </div>
+    </div>
