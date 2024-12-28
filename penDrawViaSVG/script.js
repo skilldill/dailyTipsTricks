@@ -22,7 +22,7 @@ document.addEventListener("mousedown", (event) => {
   currentPath = document.createElementNS("http://www.w3.org/2000/svg", "path");
   currentPath.setAttribute("fill", "none");
   currentPath.setAttribute("stroke", "pink");
-  currentPath.setAttribute("stroke-width", "1.0");
+  currentPath.setAttribute("stroke-width", "5.0");
   currentPath.setAttribute("stroke-linecap", "round");
   currentPath.setAttribute("stroke-linejoin", "round");
   currentPath.setAttribute("vector-effect", "non-scaling-stroke");
