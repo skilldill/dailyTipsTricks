@@ -8,7 +8,7 @@ body {
 .container {
     height: 100vh;
     background-color: #000;
-    background-image: url(./roundedSquare.png);
+    /* background-image: url(./roundedSquare.png); */
     background-position: center;
     display: flex;
     align-items: center;
@@ -24,10 +24,11 @@ button {
     cursor: pointer;
     color: #fff;
     border-radius: 14px;
-    background-color: #5353C3;
+    /* background-color: #5353C3; */
+    background: linear-gradient(45deg, #5353C3, #9c4e4e);
     position: relative;
-    border-top: 1px solid #ffffff17;
-    border-right: 1px solid #ffffff17;
+    /* border-top: 1px solid #ffffff17;
+    border-right: 1px solid #ffffff17; */
     user-select: none;
     -webkit-user-select: none;
     width: 200px;
