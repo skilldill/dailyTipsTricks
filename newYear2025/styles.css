@@ -13,7 +13,6 @@ body {
 }
 
 button {
-    position: relative;
     border: none;
     font-size: 18px;
     padding: 0px;
@@ -22,8 +21,9 @@ button {
     color: #fff;
     border-radius: 14px;
     background-color: #5353C3;
-    width: 166px;
+    width: 216px;
     height: 62px;
+    position: relative;
 }
 
 .buttonContent {
@@ -64,6 +64,13 @@ button {
 
 .active button {
     animation: activeButton .7s 0s 1 ease-in-out;
+}
+
+.active .container {
+    background-color: rgb(189, 56, 56);
+    transition: all 1s ease-out;
+    background-image: url(./backTree.png);
+    background-position: center;
 }
 
 .icon {
@@ -122,11 +129,4 @@ button {
     top: -30px;
     left: calc(50% + 24px);
     transform: rotate(20deg);
-}
-
-.active .container {
-    background-color: rgb(189, 56, 56);
-    transition: all 1s ease-out;
-    background-image: url(./backTree.png);
-    background-position: center;
 }
