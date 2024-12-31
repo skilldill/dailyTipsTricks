@@ -29,18 +29,18 @@ button {
 .buttonContent {
     border-radius: 14px;
     position: absolute;
+    background-color: #5353C3;
     top: 0px;
     right: 0px;
     bottom: 0px;
     left: 0px;
-    background-color: #5353C3;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1;
 }
 
-@keyframes activeButton {
+@keyframes buttonShake {
     0% {
         transform: rotate(0deg) scale(1);
     }
@@ -63,15 +63,16 @@ button {
 }
 
 .active button {
-    animation: activeButton .7s 0s 1 ease-in-out;
+    animation: buttonShake .7s 0s 1 ease-in-out;
 }
 
 .active .container {
-    background-color: rgb(189, 56, 56);
+    background-color: #bd3838;
     transition: all 1s ease-out;
     background-image: url(./backTree.png);
     background-position: center;
 }
+
 
 .icon {
     position: absolute;
@@ -130,3 +131,4 @@ button {
     left: calc(50% + 24px);
     transform: rotate(20deg);
 }
+
