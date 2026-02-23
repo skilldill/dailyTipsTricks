@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Scattering effect</title>
+</head>
+<body>
+    <div class="container">
+        <button>
+            Click me!
+        </button>
+    </div>
+</body>
+<script>
+    const allBtns = document.querySelectorAll('button');
+
+    function handleCommonClick(event) {
+        const effectElement = document.createElement('div');
+        effectElement.classList.add('effectElement');
+
+        event.target.append(effectElement);
+        event.target.classList.add('bounceButton');
+        
+        setTimeout(() => {
+            event.target.removeChild(effectElement);
+            event.target.classList.remove('bounceButton');
+        }, 500)
+    }
+
+    function addScatteringEffect() {
+        for (let btn of allBtns) {
+            btn.addEventListener('click', handleCommonClick);
+        }
+    }
+
+    addScatteringEffect();
+</script>
+</html>

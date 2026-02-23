@@ -1,0 +1,48 @@
+---
+import '../styles/global.css';
+
+const { title = 'Daily Tips & Tricks', description = 'Коллекция эффектов и приёмов для интерфейсов.' } = Astro.props;
+---
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <div class="container header-inner">
+          <div class="brand">
+            <div class="brand-badge">DTT</div>
+            <div>
+              <div class="brand-title">Daily Tips & Tricks</div>
+              <div class="brand-subtitle">Эффекты, микро-интерактивы и идеи для UI</div>
+            </div>
+          </div>
+          <nav class="header-actions">
+            <a class="ghost-button" href="https://github.com/skilldill/dailyTipsTricks" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="primary-button" href="https://www.youtube.com/@skilldill" target="_blank" rel="noreferrer">YouTube</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="container">
+        <slot />
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-inner">
+          <div>Новый эффект каждый день. Подписывайтесь, чтобы не пропустить.</div>
+          <div class="footer-links">
+            <a href="https://t.me/CodeTipsTricks" target="_blank" rel="noreferrer">Telegram</a>
+            <span class="footer-dot">•</span>
+            <a href="https://www.youtube.com/@skilldill" target="_blank" rel="noreferrer">YouTube</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

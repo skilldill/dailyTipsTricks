@@ -1,0 +1,72 @@
+body {
+    background-color: #000;
+    background-position: center;
+    background-image: url(./roundedSquare.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    backdrop-filter: blur(3px);
+}
+
+.mobileContainer {
+    background-image: url(./triangle.png);
+    width: 350px;
+    height: 700px;
+    border-radius: 44px;
+    background-color: #151515;
+    border-top: 1px solid #ffffff17;
+    border-right: 1px solid #ffffff17;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+button {
+    border: none;
+    padding: 20px 40px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #fff;
+    border-top: 1px solid #ffffff17;
+    border-right: 1px solid #ffffff17;
+    border-radius: 14px;
+    background-color: #36367e;
+    transition: opacity .2s;
+}
+
+.sideMenu {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 90%;
+    transform: translateX(-100%);
+    background-color: #1b1b1bbb;
+    backdrop-filter: blur(3px);
+    border-right: 1px solid #ffffff17;
+    transition: all .3s ease-out;
+    opacity: 0;
+}
+
+.sideMenuShown .sideMenu {
+    transform: translateX(0%);
+    box-shadow: 20px 0px 20px #00000088;
+    opacity: 1;
+}
+
+.btnClose {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.sideMenuShown > button {
+    opacity: 0;
+}

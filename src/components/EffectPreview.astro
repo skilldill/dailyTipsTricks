@@ -1,0 +1,31 @@
+---
+const { html, css, js, slug } = Astro.props;
+const styleOpen = '<sty' + 'le>';
+const styleClose = '</sty' + 'le>';
+const scriptOpen = '<scr' + 'ipt>';
+const scriptClose = '</scr' + 'ipt>';
+const srcdoc =
+  '<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>' +
+  `<base href="/effects/${slug}/"/>` +
+  styleOpen +
+  '*,*::before,*::after{box-sizing:border-box;}html,body{width:100%;height:100%;margin:0;overflow:hidden;}body{display:block;} .preview-root{width:100%;height:100%;} .preview-root> *{width:100%;height:100%;}' +
+  css +
+  styleClose +
+  '</head><body><div class="preview-root">' +
+  html +
+  '</div>' +
+  scriptOpen +
+  js +
+  scriptClose +
+  '</body></html>';
+---
+
+<div class="effect-preview">
+  <iframe
+    class="effect-iframe"
+    title={`Preview: ${slug}`}
+    srcdoc={srcdoc}
+    loading="lazy"
+    sandbox="allow-scripts allow-same-origin"
+  ></iframe>
+</div>

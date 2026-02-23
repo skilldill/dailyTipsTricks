@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+}
+
+.container {
+    background: #000;
+    overflow: hidden;
+    background-image: url(./dot.png);
+    color: #00ff00;
+}
+
+canvas {
+    display: block;
+}

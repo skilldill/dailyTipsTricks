@@ -1,0 +1,22 @@
+---
+const { title, slug, label, techs = [] } = Astro.props;
+const githubUrl = `https://github.com/skilldill/dailyTipsTricks/tree/main/effectsTipsTricks/${slug}`;
+---
+
+<article class="card">
+  <a class="card-overlay" href={`/effect/${slug}`} aria-label={`Открыть эффект ${title}`} target="_blank" rel="noreferrer"></a>
+  <div class="card-content">
+    <h3 class="card-title">{title}</h3>
+    <div class="card-badge">{label}</div>
+    {techs.length > 0 && (
+      <div class="tech-tags">
+        {techs.map((tech) => (
+          <span class="tech-tag">{tech}</span>
+        ))}
+      </div>
+    )}
+    <div class="card-actions">
+      <a class="secondary-button" href={`/effect/${slug}`} aria-label={`Открыть эффект ${title}`} target="_blank" rel="noreferrer">View</a>
+    </div>
+  </div>
+</article>

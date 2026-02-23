@@ -1,1 +1,26 @@
+# Node
+node_modules/
+
+# Build output
+.astro/
+dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS
 .DS_Store
+
+# Env
+.env
+.env.*
+
+# IDE
+.vscode/
+.idea/
+
+# Coverage
+coverage/

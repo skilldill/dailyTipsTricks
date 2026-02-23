@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+    background-color: #000;
+}
+
+.glowingDots {
+    height: 100vh;
+    position: relative;
+}
+
+.layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    gap: 2px;
+    z-index: 2;
+}
+
+.horizontal {
+    flex-direction: column;
+    z-index: 3;
+}
+
+.line {
+    flex: 1;
+    background-color: #000;
+}
+
+.light {
+    background-color: #ffffff88;
+    width: 300px;
+    height: 300px;
+    filter: blur(30px);
+    border-radius: 100%;
+    position: absolute;
+}

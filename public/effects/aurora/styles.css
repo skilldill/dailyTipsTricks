@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    background-color: #000;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auroraLayout {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.aurora {
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: #ffffff80;
+    filter: blur(100px);
+}
+
+@keyframes auroraMove {
+    0% {
+        transform: translateY(100px)
+            scaleX(1);
+        opacity: 1;
+    }
+
+    20% {
+        transform: translateY(-100px)
+            scaleX(2);
+        opacity: .5;
+    }
+
+    40% {
+        transform: translateY(100px)
+            scaleX(2);
+        opacity: .5;
+    }
+
+    60% {
+        transform: translateY(-150px)
+            scaleX(.7);
+        opacity: 1;
+    }
+
+    80% {
+        transform: translateY(0px)
+            scaleX(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100px)
+            scaleX(1);
+        opacity: 1;
+    }
+}
+
+.auroraRed {
+    top: 400px;
+    left: 20px;
+    background-color: #553333bb;
+    animation: auroraMove 10s 0s infinite linear;
+}
+
+.auroraBlue {
+    top: 300px;
+    left: -150px;
+    background-color: #550099bb;
+    animation: auroraMove 18s 0s infinite linear;
+}
+
+.auroraGreen {
+    top: 230px;
+    right: -150px;
+    background-color: #11aa00bb;
+    animation: auroraMove 15s 0s infinite linear alternate-reverse;
+}
+
