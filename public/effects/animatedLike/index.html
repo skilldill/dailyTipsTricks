@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Like</title>
+</head>
+<body>
+    <div class="container">
+        <button class="like" id="likeBtn">
+            <div class="likeIcon"></div>
+        </button>
+    </div>
+</body>
+<script>
+    const likeBtn = document.getElementById('likeBtn');
+
+    likeBtn.addEventListener('click', () => {
+        likeBtn.classList.toggle('liked');
+    });
+</script>
+</html>

@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    height: 100vh;
+    background-color: #000;
+    background-image: url(./roundedSquare.png);
+    background-position: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+button {
+    border: none;
+    display: block;
+    padding: 20px 40px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 14px;
+    background-color: #5353C3;
+    position: relative;
+    border-top: 1px solid #ffffff17;
+    border-right: 1px solid #ffffff17;
+    user-select: none;
+    -webkit-user-select: none;
+    width: 200px;
+}
+
+h2 {
+    color: #fff;
+    font-size: 48px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #5353C3, #9c4e4e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 200px;
+    margin-bottom: 170px;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff00;
+    pointer-events: none;
+}

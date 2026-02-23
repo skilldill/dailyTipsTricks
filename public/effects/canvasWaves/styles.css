@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: #000;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(./dot.png);
+    background-position: center;
+    gap: 50px;
+}
+
+input[type="range"] {
+    cursor: pointer;
+}

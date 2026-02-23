@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff;
+    background-image: url(./triangle.png);
+    background-position: center;
+    transition: background .5s
+}
+
+.toggleTheme {
+    width: 72px;
+    height: 36px;
+    padding-top: 3px;
+    box-sizing: border-box;
+    border: none;
+    background-color: #5353c388;
+    backdrop-filter: blur(3px);
+    border-radius: 36px;
+    font-size: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.toggleInner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: transform .3s ease-out;
+    transform: translateX(18px);
+}
+
+.thumb {
+    min-width: 28px;
+    min-height: 28px;
+    border-radius: 100%;
+    background-color: #ffffff88;
+    box-shadow: inset -2px 2px 5px #ffffff88;
+}
+
+[theme='dark'] .container {
+    background-color: #000;
+    background-image: url(./dot.png);
+}
+
+[theme='dark'] .toggleTheme {
+    background-color: #5353c3;
+    backdrop-filter: blur(0px);
+}
+
+[theme='dark'] .toggleInner {
+    transform: translateX(-18px);
+}

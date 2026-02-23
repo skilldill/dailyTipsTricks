@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+}
+
+h1 {
+    margin: 0;
+    font-size: 50px;
+    color: #000;
+    font-weight: bold;
+    -webkit-text-stroke: 1px #5353c3;
+    text-wrap: nowrap;
+}
+
+.runTextWrap {
+    width: 300px;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+}
+
+@keyframes run {
+    0% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+    49% {
+        opacity: 1;
+        transform: translateX(310px);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateX(310px);
+    }
+    51% {
+        opacity: 0;
+        transform: translateX(-310px);
+    }
+    52% {
+        opacity: 1;
+        transform: translateX(-310px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.runText {
+    opacity: 0;
+    animation: run 5s 0s infinite linear;
+}
+
+@keyframes beforeRun {
+    0% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+    97% {
+        opacity: 1;
+        transform: translateX(610px);
+    }
+
+    98% {
+        opacity: 0;
+        transform: translateX(610px);
+    }
+    99% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.runTextBefore {
+    position: absolute;
+    top: 0;
+    left: -310px;
+    transform: translate(0px);
+    animation: beforeRun 5s 0s infinite linear;
+}

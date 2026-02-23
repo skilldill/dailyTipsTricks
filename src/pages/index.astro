@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const modules = await Astro.glob('../components/effects/*.astro');
+const cards = [...modules].sort((a, b) => a.file.localeCompare(b.file));
+const total = cards.length;
+---
+
+<BaseLayout title={`Daily Tips & Tricks — ${total} эффектов`}>
+  <section class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">Astro + UI эффекты</p>
+      <h1>Коллекция эффектов и приёмов для живых интерфейсов</h1>
+      <p class="hero-text">
+        Здесь собраны все эксперименты из репозитория: от градиентных анимаций и кастомных курсоров до сложных
+        микровзаимодействий. Каждый эффект — отдельный компонент и отдельная карточка.
+      </p>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-value">{total}</div>
+          <div class="stat-label">Эффектов</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">Astro</div>
+          <div class="stat-label">Сборка</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">Modern</div>
+          <div class="stat-label">Стиль</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="grid-section">
+    <div class="section-header">
+      <h2>Каталог эффектов</h2>
+      <p>Нажмите «Смотреть код», чтобы перейти к папке эффекта на GitHub.</p>
+    </div>
+    <div class="cards-grid">
+      {cards.map(({ default: Component }) => (
+        <Component />
+      ))}
+    </div>
+  </section>
+</BaseLayout>

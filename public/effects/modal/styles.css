@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    background-image: url(./dot.png);
+    background-position: center;
+}
+
+p {
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+}
+
+button {
+    color: #ffffffbb;
+    border: none;
+    border-right: 1px solid #ffffff17;
+    border-top: 1px solid #ffffff17;
+    border-radius: 14px;
+    padding: 20px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #5353c3;
+    cursor: pointer;
+    transition: all .3s;
+    transform: scale(1);
+}
+
+button:hover {
+    transform: scale(.95);
+}
+
+.modalBackdrop {
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #00000017;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    transition: all 1s;
+}
+
+.modal {
+    opacity: 0;
+    width: 400px;
+    height: 300px;
+    border-radius: 14px;
+    border-right: 1px solid #ffffff17;
+    border-top: 1px solid #ffffff17;
+    background-color: #5353c3aa;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate3d(1, 0, 0, 10deg)
+        translateY(-200px);
+    transition: all 1s;
+}
+
+.opened.modalBackdrop {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.opened .modal {
+    opacity: 1;
+    transform: rotate3d(1, 0, 0, 0deg)
+        translateY(0px);
+}

@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #5353C3;
+    border-radius: 14px;
+    border-top: 1px solid #ffffff17;
+    border-right: 1px solid #ffffff17;
+    position: fixed;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+    transition: all .3s;
+    cursor: grab;
+}
+
+.grabbingBox {
+    cursor: grabbing;
+    transition: none;
+}

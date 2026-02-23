@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    position: relative;
+    height: 100vh;
+    background-image: url(./dot.png);
+    background-position: center;
+}
+
+.progressBar {
+    height: 50px;
+    width: 250px;
+    border-radius: 14px;
+    background-color: #ffffff44;
+    backdrop-filter: blur(3px);
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.progressFill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    background-color: #5353c388;
+    transition: all .5s;
+}
+
+.done {
+    box-shadow: 0px 0px 15px #53c373aa;
+}
+
+.done .progressFill {
+    background-color: #53c373;
+}

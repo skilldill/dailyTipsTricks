@@ -1,0 +1,75 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    background-color: #000;
+    background-image: url(./roundedSquare.png);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    border: none;
+    padding: 20px 40px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 14px;
+    background-color: #5353C3;
+}
+
+.actionsLayer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    backdrop-filter: blur(3px);
+    background-color: #00000033;
+    transition: opacity .5s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.actionsShown {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.actionsSheet {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 0px;
+    left: 50px;
+    right: 50px;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all .7s;
+}
+
+.actionsShown .actionsSheet {
+    bottom: 200px;
+}
+
+.action {
+    list-style-type: none;
+    background-color: #ffffffaa;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #ffffff17;
+    backdrop-filter: blur(6px);
+    cursor: pointer;
+    font-size: 20px;
+    color: #5353c3;
+}
+
+.actionCancel {
+    color: #5353c399;
+}
