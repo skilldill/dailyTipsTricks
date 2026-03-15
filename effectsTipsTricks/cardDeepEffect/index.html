@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #000;
+        }
+
+        .container {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container3d {
+            perspective: 800px;
+        }
+
+        .card {
+            /* width: 400px;
+            height: 240px; */
+            background-color: #6f4e99;
+            border-radius: 24px;
+            transition: transform .3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            border-top: 2px solid #ffffff30;
+            border-left: 2px solid #ffffff30;
+        }
+    </style>
+    <title>3d effects</title>
+</head>
+
+<body>
+    <div class="container container3d">
+        <div class="card" id="card">
+            <h1>Bank card</h1>
+        </div>
+    </div>
+</body>
+<script>
+    const card = document.getElementById('card');
+
+    const CARD_WIDTH = 400;
+    const CARD_HEIGHT = 240;
+
+    card.style.width = `${CARD_WIDTH}px`;
+    card.style.height = `${CARD_HEIGHT}px`;
+
+    function getRotate3d(horizontalDirection, verticalDirection, angle) {
+        const rotateX = `rotateX(${verticalDirection * 10}deg)`;
+        const rotateY = `rotateY(${horizontalDirection * 10}deg)`;
+
+        return `${rotateX} ${rotateY}`;
+    }
+
+    card.addEventListener('mousemove', function(event) {
+        let horizontalDirection = 0;
+        let verticalDirection = 0;
+
+        const posX = event.clientX - card.offsetLeft;
+        const posY = event.clientY - card.offsetTop;
+
+        if (posX < (CARD_WIDTH / 2 - 10)) {
+            horizontalDirection = -1;
+        }
+
+        if (posX > (CARD_WIDTH / 2 - 10) && posX < (CARD_WIDTH / 2 + 10)) {
+            horizontalDirection = 0;
+        }
+
+        if (posX > (CARD_WIDTH / 2 + 10)) {
+            horizontalDirection = 1;
+        }
+
+        if (posY < (CARD_HEIGHT / 2 - 10)) {
+            verticalDirection = 1;
+        }
+
+        if (posY > (CARD_HEIGHT / 2 - 10) && posY < (CARD_HEIGHT / 2 + 10)) {
+            verticalDirection = 0;
+        }
+
+        if (posY > (CARD_HEIGHT / 2 + 10)) {
+            verticalDirection = -1;
+        }
+
+        card.style.transform = getRotate3d(horizontalDirection, verticalDirection, 30);
+    });
+
+    card.addEventListener('mouseleave', function() {
+        card.style.transform = 'rotateX(0deg) rotateY(0deg)';
+    });
+</script>
+
+</html>
